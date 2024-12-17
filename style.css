@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8e4f5; /* Rosa bem claro */
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f2c5e2; /* Rosa mais suave */
+    box-shadow: 0 4px 17px rgba(255, 105, 180, 0.2); /* Sombra rosa */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+}
+
+.navBar {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navItem a {
+    font-size: 18px;
+    color: #d63384; /* Rosa médio */
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.navItem a:hover {
+    color: #bd2164; /* Rosa mais escuro */
+    cursor: pointer;
+}
+
+/* Seção Início */
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.minhaImagem {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 40%;
+    border: 5px solid #ff69b4; /* Borda rosa */
+}
+
+.resumo {
+    color: #4d004d; /* Roxo escuro */
+    max-width: 500px;
+    margin: 20px;
+}
+
+.resumo h3 {
+    font-size: 40px;
+    color: #e75480; /* Rosa escuro */
+}
+
+.resumo h1 {
+    font-size: 46px;
+    color: #4d004d; /* Roxo escuro */
+}
+
+.resumo span {
+    color: #ff69b4; /* Rosa médio (pink) */
+}
+
+.resumo p {
+    font-size: 20px;
+    color: #e75480;
+    margin: 10px 0 20px 0;
+}
+
+.redeSocial {
+    text-decoration: none;
+    color: #4d004d;
+    border: solid 1px #e75480;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    transition: 0.3s;
+    margin: 0 5px;
+}
+
+.redeSocial:hover {
+    background-color: #ff69b4;
+    color: #ffffff;
+}
+
+/* Seção Sobre Mim */
+.sobreMim {
+    width: 100%;
+    padding: 30px;
+    background-color: #f2c5e2;
+    color: #4d004d;
+    text-align: center;
+}
+
+.sobreMim h1 {
+    font-size: 64px;
+    color: #e75480;
+    border-bottom: solid 1px #ff69b4;
+    width: 40%;
+    margin: 0 auto 20px auto;
+}
+
+.meuTexto {
+    color: #4d004d;
+    font-size: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Seção Hobbies */
+.hobbies {
+    text-align: center;
+    padding: 50px 100px;
+    background-color: #f2c5e2;
+    color: #4d004d;
+}
+
+.hobbies h1 {
+    font-size: 64px;
+    color: #e75480;
+    border-bottom: 1px solid #ff69b4;
+    width: 40%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.line {
+    margin: 30px auto;
+    width: 100px;
+    height: 4px;
+    background: #ff69b4;
+    border-radius: 2px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+    justify-items: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 50px auto 0 auto;
+}
+
+.hobbie-card {
+    background-color: #f8e4f5;
+    border: 2px solid #ff69b4;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    color: #4d004d;
+    padding: 20px;
+}
+
+.hobbie-card:hover {
+    background-color: #f2c5e2;
+}
+
+.hobbie-card img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.hobbie-card h2 {
+    font-size: 20px;
+    color: #e75480;
+    margin-top: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #f2c5e2;
+    color: #4d004d;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #e75480;
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    .inicio {
+        padding: 150px 20px 20px;
+    }
+
+    .sobreMim h1,
+    .hobbies h1 {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .meuTexto {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    .hobbies {
+        padding: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hobbie-card img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .resumo h3 {
+        font-size: 30px;
+    }
+
+    .resumo h1 {
+        font-size: 36px;
+    }
+
+    .resumo p {
+        font-size: 16px;
+    }
+}
